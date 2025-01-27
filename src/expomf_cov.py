@@ -163,7 +163,7 @@ class ExpoMF(BaseEstimator, TransformerMixin):
         XT = X.T.tocsr()  # pre-compute this
         self.vad_ndcg = -np.inf
 
-        for i in xrange(self.max_iter):
+        for i in range(self.max_iter):
             if self.verbose:
                 print('ITERATION #%d' % i)
             self._update_factors(X, XT, pi)
